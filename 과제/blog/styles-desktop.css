@@ -1,0 +1,128 @@
+/* =========================
+   기본 스타일 (Desktop First)
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 80vw;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+/* header */
+
+header {
+    padding: 2rem;
+    border-bottom: 0.2rem solid black;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* section */
+
+section {
+    margin: 2vw;
+}
+
+/* posts */
+
+#posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.post {
+    padding: 1.5rem;
+    border: 0.2rem solid black;
+}
+
+/* aside */
+
+aside {
+    width: 25vw;
+    padding: 1.5rem;
+    margin-right: 2vw;
+    font-size: 1em;
+}
+
+/* footer */
+
+footer {
+    padding: 1.5rem;
+    border-top: 0.2rem solid black;
+    text-align: center;
+}
+
+/* =========================
+   Tablet (max-width: 1023px)
+========================= */
+
+@media (max-width: 1023px) {
+
+    body {
+        max-width: 90vw;
+    }
+
+    #posts {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    aside {
+        width: 30vw;
+        margin-right: 1vw;
+    }
+
+}
+
+/* =========================
+   Mobile (max-width: 767px)
+========================= */
+
+@media (max-width: 767px) {
+
+    body {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #posts {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    aside {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+}
