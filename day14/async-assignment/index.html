@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 타이머 과제</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 에러 발생 시 빨간색 표시를 위한 전 전용 클래스 */
+        .error {
+            color: #dc3545 !important; /* 부트스트랩 danger 색상 */
+            font-weight: bold;
+        }
+        #timerDisplay {
+            min-height: 60px;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card shadow" style="width: 26rem;">
+            <div class="card-body p-4">
+                <h4 class="card-title text-center mb-4 text-dark">⏱️ Countdown Timer</h4>
+                
+                <div class="input-group mb-3">
+                    <input type="number" id="timerInput" class="form-control" placeholder="1~10 사이 숫자" min="1" max="10">
+                    <button id="startTimer" class="btn btn-primary" type="button">시작</button>
+                </div>
+
+                <div id="timerDisplay" class="alert alert-secondary text-center fs-5 mb-0">
+                    숫자를 입력하고 시작을 누르세요.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="async_assignment.js"></script>
+</body>
+</html>
